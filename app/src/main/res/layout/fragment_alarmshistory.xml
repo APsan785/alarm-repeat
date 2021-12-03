@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/google_pixel_5_3">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_alarms"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="13dp"
+        android:paddingTop="22dp"
+        tools:listitem="@layout/alarm_card" />
+
+    <ImageButton
+        android:elevation="7dp"
+        android:id="@+id/deleteAllbtn"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/round_btn"
+        android:scaleType="center"
+        android:src="@drawable/ic_trash"
+        app:tint="#663ED6" />
+
+    <TextView
+        android:id="@+id/no_alarms_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/text_view_bg"
+        android:padding="8dp"
+        android:text="NO PREVIOUS ALARMS"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        android:elevation="12dp"
+        />
+
+</RelativeLayout>

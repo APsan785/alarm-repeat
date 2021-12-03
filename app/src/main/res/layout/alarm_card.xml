@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp"
+    android:elevation="12dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F6FF9F"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="11dp"
+            android:text="05:30 AM to 12:30 PM"
+            android:textColor="#023A00"
+            android:textSize="23sp" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timeText"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="17dp"
+            android:gravity="center"
+            android:text="STATUS"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/trig_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timeText"
+            android:layout_marginStart="37dp"
+            android:layout_marginTop="7dp"
+            android:text="Triggered"
+            android:textColor="#544545"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/timeText"
+            android:layout_marginStart="131dp"
+            android:layout_marginTop="7dp"
+            android:text="Total"
+            android:textColor="#544545"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/triggers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/trig_text"
+            android:layout_marginStart="52dp"
+            android:text="4"
+            android:textColor="#023A00"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/totals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/total_text"
+            android:layout_marginStart="140dp"
+            android:text="5"
+            android:textColor="#023A00"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

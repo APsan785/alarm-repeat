@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mask_group_1"
+    android:id="@+id/scrollView"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp">
+
+
+        <FrameLayout
+            android:id="@+id/mask"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/mask_rectangle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+        </FrameLayout>
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:numbersBackgroundColor="#F5FF95"
+            android:numbersSelectorColor="#707070"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/showalarmsbtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@android:color/transparent"
+
+            android:contentDescription="Button to show previous Alarms"
+            android:elevation="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_baseline_menu_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/info_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="20dp"
+            android:elevation="1dp"
+            android:contentDescription="Button to show info dialog"
+            app:tint="#F5FF95" />
+
+
+        <View
+            android:layout_marginTop="8dp"
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:layout_marginHorizontal="18.5dp"
+            android:background="#F1FFB7"
+            app:layout_constraintTop_toBottomOf="@+id/timePicker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:text="Repeat after hours:"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <me.angrybyte.numberpicker.view.ActualNumberPicker
+            android:id="@+id/repeat_time_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="19dp"
+            app:controls_color="@color/picker_color"
+            app:draw_over_controls="true"
+            app:draw_over_text="false"
+            app:fast_controls_color="@color/picker_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1"
+            app:max_value="10"
+            app:min_value="1"
+            app:selection_color="@color/white"
+            app:show_bars="false"
+            app:show_highlight="false"
+            app:text_color="@color/picker_color"
+            app:text_size="30sp"
+            app:value="3"
+
+            />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:layout_marginHorizontal="18.5dp"
+            android:layout_marginTop="14dp"
+            android:background="#F1FFB7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/repeat_time_picker" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:text="Ring how many times :"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+        <me.angrybyte.numberpicker.view.ActualNumberPicker
+            android:id="@+id/repeat_number_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="19dp"
+            app:controls_color="@color/picker_color"
+            app:draw_over_text="true"
+            app:fast_controls_color="@color/picker_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv2"
+            app:max_value="10"
+            app:min_value="2"
+            app:selection_color="@color/white"
+            app:show_bars="false"
+            app:show_highlight="false"
+            app:text_color="@color/picker_color"
+            app:text_size="30sp"
+            app:value="5" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp"
+            android:layout_marginHorizontal="18.5dp"
+            android:layout_marginTop="14dp"
+            android:background="#F1FFB7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/repeat_number_picker" />
+
+
+        <ToggleButton
+
+            android:id="@+id/alarmBtn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/btn_bg"
+            android:textOff="Schedule the Alarms"
+            android:textOn="Turn off the Alarms"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
